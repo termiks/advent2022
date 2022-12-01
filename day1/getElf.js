@@ -17,7 +17,9 @@ fs.readFile("input.txt", (err, data) => {
   }
   console.log("highest elf -> " + Math.max(...summedArray));
   var top3boys = summedArray.sort().reverse().slice(3, 6);
+  var top3sec = summedArray.sort((a,b) => b-a).slice(0, 3);
   console.log("top 3 values -> " + top3boys);
+  console.log(top3sec);
   var top3sum = 0;
   for (var i = top3boys.length; i--; ) {
     top3sum += top3boys[i];
